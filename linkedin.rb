@@ -22,6 +22,7 @@ field.set em
 field = b.text_field :type=> 'password'
 field.exist? 
 field.set pa
+
 # that smells like too much repetition 
 # i could try to shorten it like "b.text_field(:type=> 'text').set em"
 # BUT i want to include "field.exist?" just in case
@@ -48,7 +49,7 @@ b.div(:class=> 'msg-form__contenteditable').send_keys 'https://www.youtube.com/w
 
 
 # hit send
-browser.button(:type=>'submit').click
+b.button(:type=>'submit').click
 
 
 sleep(5) # for napping purposes
